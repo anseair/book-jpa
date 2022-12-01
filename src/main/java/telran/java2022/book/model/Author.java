@@ -3,8 +3,10 @@ package telran.java2022.book.model;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -18,6 +20,7 @@ import lombok.Setter;
 @Setter
 @EqualsAndHashCode(of = "name")
 @Entity
+
 public class Author implements Serializable{
 
 	private static final long serialVersionUID = -1645709488798377819L;

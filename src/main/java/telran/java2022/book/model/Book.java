@@ -3,6 +3,7 @@ package telran.java2022.book.model;
 import java.io.Serializable;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
@@ -31,4 +32,6 @@ public class Book implements Serializable{
 	Set<Author> authors;
 	@ManyToOne
 	Publisher publisher;
+	
+
 }

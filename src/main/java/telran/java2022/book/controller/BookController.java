@@ -39,13 +39,13 @@ public class BookController {
 	}
 
 	@GetMapping("/books/author/{author}")
-	public Iterable<BookDto> findBooskByAuthor(@PathVariable String authorName) {
-		return bookService.findBooskByAuthor(authorName);
+	public Iterable<BookDto> findBooskByAuthor(@PathVariable String author) {
+		return bookService.findBooskByAuthor(author);
 	}
 
 	@GetMapping("/books/publisher/{publisher}")
-	public Iterable<BookDto> findBooskByPublisher(@PathVariable String publisherName) {
-		return bookService.findBooskByPublisher(publisherName);
+	public Iterable<BookDto> findBooskByPublisher(@PathVariable String publisher) {
+		return bookService.findBooskByPublisher(publisher);
 	}
 
 	@GetMapping("/authors/book/{isbn}")
@@ -54,13 +54,13 @@ public class BookController {
 	}
 
 	@GetMapping("/publishers/author/{author}")
-	public Iterable<String> findPublishersByAuthor(@PathVariable String publisherName) {
-		return bookService.findPublishersByAuthor(publisherName);
+	public Iterable<String> findPublishersByAuthor(@PathVariable String author) {
+		return bookService.findPublishersByAuthor(author);
 	}
 
-	@DeleteMapping("author/{author}")
-	public AuthorDto removeAuthor(@PathVariable String authorName) {
-		return bookService.removeAuthor(authorName);
+	@DeleteMapping("/author/{author}")
+	public AuthorDto removeAuthor(@PathVariable String author) {
+		return bookService.removeAuthor(author);
 	}
 	
 	 
