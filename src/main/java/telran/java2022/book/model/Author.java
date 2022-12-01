@@ -2,6 +2,7 @@ package telran.java2022.book.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -28,4 +29,15 @@ public class Author implements Serializable{
 	@Id
 	String name;
 	LocalDate birthDate;
+	
+	@ManyToMany(mappedBy = "authors", cascade = CascadeType.ALL)
+	Set<Book> books;
+
+	public Author(String name, LocalDate birthDate) {
+		super();
+		this.name = name;
+		this.birthDate = birthDate;
+	}
+	
+	
 }
